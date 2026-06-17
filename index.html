@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jingkai Bo - Ph.D. Candidate and Materials Science Researcher. Specializing in microscopy, defect analysis, and deep learning-based image processing.">
+    <meta name="author" content="Jingkai Bo">
+    <meta name="theme-color" content="#0a66c2">
+
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://bojingkai.com/">
+    <meta property="og:title" content="Jingkai Bo - Materials Science Researcher">
+    <meta property="og:description" content="Ph.D. Candidate · JST SPRING Scholar. Materials science researcher working on microscopy, defect analysis, and image-based methods.">
+    <meta property="og:site_name" content="Jingkai Bo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jingkai Bo - Materials Science Researcher">
+    <meta name="twitter:description" content="Ph.D. Candidate · JST SPRING Scholar. Materials science researcher working on microscopy, defect analysis, and image-based methods.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bojingkai.com/">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Jingkai Bo - Materials Science Researcher</title>
+
+    <style>
+        /* CSS Custom Properties */
+        :root {
+            --primary-blue: #1a73a7;
+            --primary-blue-dark: #0d5a84;
+            --primary-blue-light: #e8f2f8;
+            --bg-light: #f5f7fa;
+            --bg-white: #ffffff;
+            --border-light: #e2e6ea;
+            --text-primary: #1a2b3c;
+            --text-secondary: #556270;
+            --text-tertiary: #8a95a3;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --transition-default: all 0.3s ease;
+            --spacing-xs: 8px;
+            --spacing-sm: 12px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+        }
+
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica', 'Arial', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 1.3;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--primary-blue-light);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: var(--transition-default);
+        }
+
+        a:hover {
+            color: var(--primary-blue-dark);
+            text-decoration: underline;
+        }
+
+        a:focus {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+            border-radius: 0 0 4px 0;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: var(--bg-white);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 50;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-lg);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            white-space: nowrap;
+        }
+
+        nav a {
+            margin-left: var(--spacing-lg);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-default);
+        }
+
+        nav a:hover {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .nav-desktop {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-primary);
+            border-radius: 2px;
+            transition: var(--transition-default);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+            color: white;
+            padding-bottom: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-lg) 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+            opacity: 0.95;
+        }
+
+        .hero-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            max-width: 600px;
+            margin: -80px auto var(--spacing-xl);
+            padding: var(--spacing-xl);
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto var(--spacing-md);
+            border: 4px solid var(--primary-blue-light);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%;
+        }
+
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-primary);
+        }
+
+        .profile-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .profile-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .profile-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .cta-button {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-default);
+            margin-top: var(--spacing-md);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-blue-dark);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--primary-blue-dark);
+            outline-offset: 2px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: var(--spacing-xl);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-default);
+            animation: fadeInCard 0.6s ease-out backwards;
+        }
+
+        @keyframes fadeInCard {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-blue-light);
+        }
+
+        .card.fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        .card.fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: var(--transition-default);
+        }
+
+        /* Section Header */
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 2px solid var(--primary-blue-light);
+        }
+
+        .section-header h2 {
+            margin: 0;
+            border: none;
+            padding: 0;
+            flex: 1;
+        }
+
+        .section-icon {
+            font-size: 1.5rem;
+            margin-right: var(--spacing-md);
+            color: var(--primary-blue);
+        }
+
+        /* Skills & Tags */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+        }
+
+        .skill-tag {
+            background-color: var(--primary-blue-light);
+            color: var(--primary-blue);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--primary-blue);
+            transition: var(--transition-default);
+            cursor: default;
+        }
+
+        .skill-tag:hover {
+            background-color: var(--primary-blue);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-blue), transparent);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-md);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -46px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-blue);
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px var(--bg-white), 0 0 0 5px var(--primary-blue);
+        }
+
+        .timeline-date {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .timeline-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .timeline-description {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Publications */
+        .publication-item {
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .publication-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .publication-authors {
+            color: var(--text-tertiary);
+            font-size: 0.85rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* Presentations */
+        .presentation-item {
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-md);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .presentation-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .presentation-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .presentation-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .sidebar-card {
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-default);
+        }
+
+        .sidebar-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .sidebar-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: var(--spacing-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            font-size: 0.9rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--spacing-sm);
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--primary-blue);
+            min-width: 60px;
+        }
+
+        .contact-value {
+            color: var(--text-secondary);
+            word-break: break-all;
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-primary);
+            color: white;
+            padding: var(--spacing-xl) var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: white;
+            transition: var(--transition-default);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-blue-light);
+            text-decoration: none;
+        }
+
+        .footer-copyright {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: var(--spacing-md);
+        }
+
+        /* Responsive Design — Tablet */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-desktop {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--bg-white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: var(--spacing-md) var(--spacing-lg);
+                border-bottom: 1px solid var(--border-light);
+                box-shadow: var(--shadow-md);
+                gap: var(--spacing-sm);
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+
+            .nav-desktop.active {
+                max-height: 300px;
+            }
+
+            .nav-desktop a {
+                margin-left: 0;
+                padding: var(--spacing-sm) 0;
+                font-size: 1rem;
+                text-align: left;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-card {
+                margin-left: var(--spacing-lg);
+                margin-right: var(--spacing-lg);
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                padding: 0 var(--spacing-md);
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .profile-name {
+                font-size: 1.5rem;
+            }
+
+            .avatar {
+                width: 160px;
+                height: 160px;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            .footer-links {
+                gap: var(--spacing-md);
+            }
+
+            .timeline {
+                padding-left: var(--spacing-md);
+            }
+
+            .publication-title,
+            .presentation-title {
+                font-size: 1rem;
+            }
+        }
+
+        /* Responsive Design — Phone */
+        @media (max-width: 480px) {
+            .header-content {
+                padding: var(--spacing-sm) var(--spacing-md);
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding-bottom: 90px;
+            }
+
+            .hero-tagline {
+                font-size: 0.95rem;
+            }
+
+            .hero-title {
+                font-size: 1.3rem;
+            }
+
+            .profile-card {
+                margin-left: var(--spacing-sm);
+                margin-right: var(--spacing-sm);
+                margin-top: -70px;
+                padding: var(--spacing-md);
+            }
+
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile-name {
+                font-size: 1.25rem;
+            }
+
+            .profile-title {
+                font-size: 0.95rem;
+            }
+
+            .profile-meta {
+                flex-direction: column;
+                gap: var(--spacing-xs);
+                font-size: 0.85rem;
+            }
+
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+
+            .section-header {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .section-icon {
+                font-size: 1.2rem;
+                margin-right: var(--spacing-sm);
+            }
+
+            h2 {
+                font-size: 1.15rem;
+            }
+
+            .card, .sidebar-card {
+                padding: var(--spacing-md);
+                border-radius: var(--radius-sm);
+            }
+
+            .skills-container {
+                gap: 6px;
+            }
+
+            .skill-tag {
+                padding: 6px 12px;
+                font-size: 0.82rem;
+            }
+
+            .timeline {
+                padding-left: var(--spacing-md);
+            }
+
+            .timeline-title {
+                font-size: 0.95rem;
+            }
+
+            .timeline-subtitle,
+            .timeline-description {
+                font-size: 0.85rem;
+            }
+
+            .publication-item,
+            .presentation-item {
+                margin-bottom: var(--spacing-md);
+                padding-bottom: var(--spacing-md);
+            }
+
+            .publication-title,
+            .presentation-title {
+                font-size: 0.95rem;
+                line-height: 1.4;
+            }
+
+            .publication-meta,
+            .presentation-meta {
+                font-size: 0.82rem;
+            }
+
+            .publication-authors {
+                font-size: 0.8rem;
+            }
+
+            .contact-item {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .contact-label {
+                min-width: unset;
+                font-size: 0.82rem;
+            }
+
+            .contact-value {
+                font-size: 0.85rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: var(--spacing-sm);
+            }
+
+            .footer-copyright {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 360px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile-name {
+                font-size: 1.1rem;
+            }
+
+            .profile-card {
+                margin-left: var(--spacing-xs);
+                margin-right: var(--spacing-xs);
+                padding: var(--spacing-sm);
+            }
+
+            .card, .sidebar-card {
+                padding: var(--spacing-sm);
+            }
+
+            .skill-tag {
+                padding: 5px 10px;
+                font-size: 0.78rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jingkai Bo",
+        "jobTitle": "Ph.D. Candidate · JST SPRING Scholar",
+        "description": "Materials science researcher working on microscopy, defect analysis, and image-based methods",
+        "url": "https://bojingkai.com",
+        "email": "tech@bojingkai.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "JP",
+            "addressLocality": "Tokyo",
+            "addressRegion": "Tokyo"
+        },
+        "affiliation": [
+            {
+                "@type": "Organization",
+                "name": "Tokyo University of Science",
+                "url": "https://www.tus.ac.jp/en/"
+            },
+            {
+                "@type": "Organization",
+                "name": "University of Oxford",
+                "url": "https://www.ox.ac.uk/"
+            }
+        ],
+        "knowsLanguage": ["English", "Japanese", "Chinese"],
+        "knowsAbout": [
+            "Materials Science",
+            "STEM Image Processing",
+            "Defect Reconstruction",
+            "Deep Learning",
+            "Transmission Electron Microscopy",
+            "Python",
+            "C++"
+        ],
+        "sameAs": [
+            "https://bojingkai.com"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header & Navigation -->
+    <header role="banner">
+        <div class="header-content">
+            <div class="logo">Jingkai Bo</div>
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav role="navigation" aria-label="Main navigation">
+                <div class="nav-desktop">
+                    <a href="#about">About</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#presentations">Conference Contributions</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" role="region" aria-label="Hero section">
+        <div class="hero-content">
+            <p class="hero-tagline">Materials Science Researcher</p>
+            <h1 class="hero-title">Jingkai Bo</h1>
+        </div>
+    </section>
+
+    <!-- Profile Card -->
+    <section class="profile-card" role="region" aria-label="Profile introduction">
+        <div class="avatar" aria-label="Profile photo"><img src="profile.jpg" alt="Jingkai Bo" loading="lazy"></div>
+        <h2 class="profile-name">Jingkai Bo</h2>
+        <p class="profile-title">Ph.D. Candidate · JST SPRING Scholar</p>
+        <p style="color: var(--text-secondary); margin-top: var(--spacing-md); font-size: 0.95rem;">
+            Materials science researcher working on microscopy, defect analysis, and image-based methods.
+        </p>
+        <div class="profile-meta">
+            <div class="profile-meta-item">
+                <span>📍</span>
+                <span>Tokyo, Japan</span>
+            </div>
+            <div class="profile-meta-item">
+                <span>🎓</span>
+                <span>Tokyo University of Science</span>
+            </div>
+            <div class="profile-meta-item">
+                <span>🌍</span>
+                <span>Oxford · TDS &amp; H Trapping (Jul–Oct 2026)</span>
+            </div>
+        </div>
+        <a href="mailto:tech@bojingkai.com" class="cta-button">Get in Touch</a>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container">
+        <article>
+            <!-- About Section -->
+            <section class="card fade-in" id="about">
+                <div class="section-header">
+                    <span class="section-icon">👤</span>
+                    <h2>About</h2>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-md); line-height: 1.7;">
+                    I am a Ph.D. candidate in Materials Science and Technology at Tokyo University of Science, specializing in microscopy-based defect analysis and deep learning-enhanced image processing. My research focuses on understanding materials behavior at the nanoscale through advanced characterization techniques, particularly transmission electron microscopy (TEM) and scanning electron microscopy (SEM).
+                </p>
+                <p style="color: var(--text-secondary); line-height: 1.7;">
+                    Currently supported by the JST SPRING scholarship, I am pursuing innovative approaches to automate defect detection and reconstruction. I will be joining the University of Oxford as a Visiting Researcher from July to October 2026 to work with Professor Emilio on thermal desorption spectroscopy (TDS) and hydrogen trapping in materials.
+                </p>
+            </section>
+
+            <!-- Focus & Skills Section -->
+            <section class="card fade-in">
+                <div class="section-header">
+                    <span class="section-icon">⚡</span>
+                    <h2>Skills & Focus Areas</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-tag">Materials Science</div>
+                    <div class="skill-tag">STEM Image Processing</div>
+                    <div class="skill-tag">Defect Reconstruction</div>
+                    <div class="skill-tag">Deep Learning</div>
+                    <div class="skill-tag">MD Simulation</div>
+                    <div class="skill-tag">XPFC Simulation</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">TEM Operation</div>
+                </div>
+            </section>
+
+            <!-- Education & Experience Section -->
+            <section class="card fade-in">
+                <div class="section-header">
+                    <span class="section-icon">🎓</span>
+                    <h2>Education & Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 – Present</div>
+                        <div class="timeline-title">Ph.D. Candidate · Materials Science and Technology</div>
+                        <div class="timeline-subtitle">Tokyo University of Science</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jul 2026 – Oct 2026</div>
+                        <div class="timeline-title">Visiting Researcher</div>
+                        <div class="timeline-subtitle">University of Oxford</div>
+                        <div class="timeline-description">Research on thermal desorption spectroscopy (TDS) and hydrogen trapping in materials with Professor Emilio</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 – 2022</div>
+                        <div class="timeline-title">M.S. · Quantum Physics</div>
+                        <div class="timeline-subtitle">Kyushu University</div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">2016 – 2020</div>
+                        <div class="timeline-title">B.S. · Information Management and Information Systems</div>
+                        <div class="timeline-subtitle">Liaoning Technical University</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications Section -->
+            <section class="card fade-in" id="publications">
+                <div class="section-header">
+                    <span class="section-icon">📰</span>
+                    <h2>Publications</h2>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Deep residual networks for tilt-series denoising in rapid-scan BF-STEM: Enabling 3D dislocation reconstruction</div>
+                    <div class="publication-meta">Materials Characterization · Volume 238 · Article 116553 · August 2026 · <a href="https://doi.org/10.1016/j.matchar.2026.116553" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.matchar.2026.116553</a></div>
+                    <div class="publication-authors">Jingkai Bo, Yifang Zhao, Hongye Gao, Tatsuya Morikawa, Toshiyuki Fujii, Satoshi Hata, and Xiao-Wen Lei</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Development of an automated approach for designing material functions via precise control of lattice defects</div>
+                    <div class="publication-meta">Applied Surface Science · Volume 745 · Article 167421 · November 2026 · <a href="https://doi.org/10.1016/j.apsusc.2026.167421" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.apsusc.2026.167421</a></div>
+                    <div class="publication-authors">Jingkai Bo, Tong Lu, Toshiyuki Fujii, and Xiao-Wen Lei</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Real-time in-situ three-dimensional observation of dislocations during tensile deformation</div>
+                    <div class="publication-meta">Materials Characterization · Volume 221 · Article 114725 · March 2025 · <a href="https://doi.org/10.1016/j.matchar.2025.114725" target="_blank" rel="noopener noreferrer">DOI: 10.1016/j.matchar.2025.114725</a></div>
+                    <div class="publication-authors">Yifang Zhao, Hongye Gao, Jingkai Bo, Zimeng Guo, Qi Zhang, Yiming Ma, and Satoshi Hata</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Real-time three-dimensional observation of dislocations in (001) Cu single-crystal thin films under tensile stress</div>
+                    <div class="publication-meta">Materia · The Japan Institute of Metals and Materials · Volume 64, Number 12 · Page 829 · 2025</div>
+                    <div class="publication-authors">Yifang Zhao, Jingkai Bo, Zimeng Guo, Qi Zhang, Yiming Ma, Hongye Gao, and Satoshi Hata</div>
+                </div>
+
+                <div class="publication-item">
+                    <div class="publication-title">Identification of miners' unsafe behaviors based on transfer learning and residual network</div>
+                    <div class="publication-meta">China Safety Science Journal · Volume 30 · Pages 41-46 · 2020</div>
+                    <div class="publication-authors">Tingxin Wen, Guitong Wang, Xiangbo Kong, Mengxiao Liu, and Jingkai Bo</div>
+                </div>
+
+            </section>
+
+            <!-- Conference Contributions Section -->
+            <section class="card fade-in" id="presentations">
+                <div class="section-header">
+                    <span class="section-icon">🎤</span>
+                    <h2>Conference Contributions</h2>
+                </div>
+
+                <p style="color: var(--text-tertiary); font-size: 0.92rem; margin-bottom: var(--spacing-lg); line-height: 1.7;">
+                    The items below are listed as co-authored oral or poster contributions. They do not imply that I was the presenting speaker unless that role is explicitly stated elsewhere.
+                </p>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Novel Denoise Based on ResNet for STEM Observation</div>
+                    <div class="presentation-meta">Co-authored poster contribution · 79th Annual Meeting of the Microscopy Society of Japan · Matsue, Shimane, Japan · June 2023</div>
+                    <div class="publication-authors">Jingkai Bo, Yingfang Zhao, Hongye Gao, Qi Zhang, Zimeng Guo, and Satoshi Hata</div>
+                </div>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Development of a real-time in-situ three-dimensional observation method for dislocation dynamics</div>
+                    <div class="presentation-meta">Co-authored oral contribution · 65th Kyushu Branch Academic Meeting of the Microscopy Society of Japan · Kitakyushu, Fukuoka, Japan · December 2023</div>
+                    <div class="publication-authors">Yifang Zhao, Jingkai Bo, Hongye Gao, Zimeng Guo, Qi Zhang, and Satoshi Hata</div>
+                </div>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Enhanced Denoising of STEM Images with Deep Learning: Development and Application of TEM IMAGE PROCESSOR Software</div>
+                    <div class="presentation-meta">Co-authored poster contribution · IMC20 Satellite Symposium · Fukuoka, Japan · September 2023</div>
+                    <div class="publication-authors">Jingkai Bo, Yingfang Zhao, Hongye Gao, Zimeng Guo, and Satoshi Hata</div>
+                </div>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Real-time in-situ three-dimensional observation of dislocations during tensile deformation</div>
+                    <div class="presentation-meta">Co-authored oral contribution · International Symposium on Microscopy &amp; Microanalysis of Materials 2024 · Fukuoka, Japan · September 2024</div>
+                    <div class="publication-authors">Yifang Zhao, Hongye Gao, Jingkai Bo, Zimeng Guo, Qi Zhang, Yiming Ma, and Satoshi Hata</div>
+                </div>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Time-series 3D reconstruction of Co-doped BaFe2As2 sintering process in scanning electron microscopy</div>
+                    <div class="presentation-meta">Co-authored oral contribution · International Symposium on Microscopy &amp; Microanalysis of Materials 2024 · Fukuoka, Japan · September 2024</div>
+                    <div class="publication-authors">Yiming Ma, Jingkai Bo, and Satoshi Hata</div>
+                </div>
+
+                <div class="presentation-item">
+                    <div class="presentation-title">Phase-Field Crystal Coupled Model for Cyclic Single-Crystal Copper</div>
+                    <div class="presentation-meta">Co-authored poster contribution · 2026 Spring Meeting of the Japan Institute of Metals and Materials · Tokyo, Japan · March 2026</div>
+                    <div class="publication-authors">Jingkai Bo, Xiao-Wen Lei, and Toshiyuki Fujii</div>
+                </div>
+            </section>
+
+            <!-- Intellectual Property Section -->
+            <section class="card fade-in">
+                <div class="section-header">
+                    <span class="section-icon">🔐</span>
+                    <h2>Intellectual Property</h2>
+                </div>
+
+                <div class="publication-item" style="margin-bottom: 0; border-bottom: none; padding-bottom: 0;">
+                    <div class="publication-title">Development of an Automated Approach to the Design of Material Functions via Precise Control of Lattice Defects</div>
+                    <div class="publication-meta">Patent application · 2025-0076 · 2025</div>
+                    <div class="publication-authors">Inventors: Jingkai Bo, Xiao-Wen Lei, and Toshiyuki Fujii</div>
+                </div>
+
+                <div class="publication-item" style="margin-top: var(--spacing-lg); margin-bottom: 0; border-bottom: none; padding-bottom: 0;">
+                    <div class="publication-title">Artificial Intelligence Search Engine Retrieval System V1.0</div>
+                    <div class="publication-meta">Software registration · No. 2019SR0859414 · 2019</div>
+                </div>
+            </section>
+
+            <!-- Recognition Section -->
+            <section class="card fade-in">
+                <div class="section-header">
+                    <span class="section-icon">🏆</span>
+                    <h2>Recognition</h2>
+                </div>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--border-light);">
+                        <div style="font-weight: 600; color: var(--text-primary);">JST SPRING Scholar</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Japan Science and Technology Agency</div>
+                    </li>
+                    <li style="margin-bottom: var(--spacing-md); padding-bottom: var(--spacing-md); border-bottom: 1px solid var(--border-light);">
+                        <div style="font-weight: 600; color: var(--text-primary);">Outstanding Graduate</div>
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Liaoning Provincial Department of Education · 2021</div>
+                    </li>
+                </ul>
+            </section>
+        </article>
+
+        <!-- Sidebar -->
+        <aside role="complementary">
+            <!-- Contact Card -->
+            <div class="sidebar-card" id="contact">
+                <div class="sidebar-title">Contact</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:tech@bojingkai.com" class="contact-value">tech@bojingkai.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Website</span>
+                        <a href="https://bojingkai.com" class="contact-value">bojingkai.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">ORCID</span>
+                        <a href="https://orcid.org/0009-0006-5221-1805" class="contact-value" target="_blank" rel="noopener noreferrer">0009-0006-5221-1805</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">Location</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                    <p style="margin-bottom: 8px;">
+                        <strong>Current</strong><br>
+                        Tokyo, Japan
+                    </p>
+                    <p>
+                        <strong>Visiting</strong><br>
+                        Oxford, United Kingdom<br>
+                        <span style="font-size: 0.85rem; color: var(--text-tertiary);">Jul–Oct 2026</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Affiliation Card -->
+            <div class="sidebar-card">
+                <div class="sidebar-title">Affiliation</div>
+                <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8;">
+                    <p style="margin-bottom: 8px;">
+                        <strong>Ph.D.</strong><br>
+                        <a href="https://www.tus.ac.jp/en/" target="_blank" rel="noopener noreferrer">Tokyo University of Science</a>
+                    </p>
+                    <p style="margin-bottom: 8px;">
+                        <strong>Visiting</strong><br>
+                        <a href="https://www.ox.ac.uk/" target="_blank" rel="noopener noreferrer">University of Oxford</a>
+                    </p>
+                    <p>
+                        <strong>Previous</strong><br>
+                        <a href="https://www.kyushu-u.ac.jp/en/" target="_blank" rel="noopener noreferrer">Kyushu University</a>
+                    </p>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:tech@bojingkai.com">Email</a>
+                <a href="https://bojingkai.com" target="_blank" rel="noopener noreferrer">Website</a>
+                <a href="#about">About</a>
+                <a href="#publications">Publications</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Jingkai Bo. All rights reserved. · Made with ♥</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navDesktop = document.querySelector('.nav-desktop');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navDesktop.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('active'));
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-desktop a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navDesktop.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Intersection Observer for Fade-in Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card.fade-in').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Smooth scroll for anchor links (fallback for older browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Set current year in footer
+        const yearElement = document.querySelector('.footer-copyright p');
+        if (yearElement) {
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = `\u00a9 ${currentYear} Jingkai Bo. All rights reserved. \u00b7 Made with \u2665`;
+        }
+    </script>
+</body>
+</html>
